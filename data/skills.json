@@ -1,0 +1,424 @@
+{
+	"_comment": "Skills grow by use; every level past the first is one point to spend in that skill's tree. The Law tree is fed by Inscription mastery (a point per 10). Every effect key is read by gameplay code (Run.perk). The first node of the four combat trees is an Art (a basic power on Z X V B); Whirlwind is known from the start.",
+	"skills": {
+		"blade": {
+			"name": "Blade",
+			"icon": "sword",
+			"text": "Grows when your strikes land."
+		},
+		"guard": {
+			"name": "Guard",
+			"icon": "shield",
+			"text": "Grows when you block a blow."
+		},
+		"agility": {
+			"name": "Agility",
+			"icon": "boot",
+			"text": "Grows when you roll and run."
+		},
+		"vitality": {
+			"name": "Vitality",
+			"icon": "heart",
+			"text": "Grows when you are hurt and recover."
+		},
+		"law": {
+			"name": "The Law",
+			"icon": "sigil",
+			"text": "Grows with your Inscription's mastery."
+		}
+	},
+	"trees": {
+		"blade": [
+			{
+				"id": "whirlwind",
+				"name": "Whirlwind",
+				"effect": "art",
+				"value": 1.0,
+				"key": "Z",
+				"text": "An Art. Spin with the blade and strike everything around you.",
+				"pos": [
+					0,
+					0
+				]
+			},
+			{
+				"id": "keen_edge",
+				"name": "Keen Edge",
+				"effect": "damage",
+				"value": 0.12,
+				"pos": [
+					0,
+					1
+				],
+				"text": "Strikes deal 12% more.",
+				"needs": [
+					"whirlwind"
+				]
+			},
+			{
+				"id": "follow_through",
+				"name": "Follow Through",
+				"effect": "finisher",
+				"value": 0.3,
+				"pos": [
+					-1,
+					2
+				],
+				"needs": [
+					"keen_edge"
+				],
+				"text": "The last swing of a combo deals 30% more."
+			},
+			{
+				"id": "cleave",
+				"name": "Cleave",
+				"effect": "cleave",
+				"value": 1.0,
+				"pos": [
+					1,
+					2
+				],
+				"needs": [
+					"keen_edge"
+				],
+				"text": "Swings reach wider and hit everyone in the arc."
+			},
+			{
+				"id": "riposte",
+				"name": "Riposte",
+				"effect": "riposte",
+				"value": 0.6,
+				"pos": [
+					-1,
+					3
+				],
+				"needs": [
+					"follow_through"
+				],
+				"text": "A strike right after a perfect block deals 60% more."
+			},
+			{
+				"id": "executioner",
+				"name": "Executioner",
+				"effect": "execute",
+				"value": 0.35,
+				"pos": [
+					1,
+					3
+				],
+				"needs": [
+					"cleave"
+				],
+				"text": "Staggered foes take 35% more."
+			}
+		],
+		"guard": [
+			{
+				"id": "shield_bash",
+				"name": "Shield Bash",
+				"effect": "art",
+				"value": 1.0,
+				"key": "X",
+				"text": "An Art. Drive the shield into a foe and knock it off balance.",
+				"pos": [
+					0,
+					0
+				]
+			},
+			{
+				"id": "steady_arm",
+				"name": "Steady Arm",
+				"effect": "block_cost",
+				"value": -0.25,
+				"pos": [
+					0,
+					1
+				],
+				"text": "Blocking costs 25% less stamina.",
+				"needs": [
+					"shield_bash"
+				]
+			},
+			{
+				"id": "perfect_guard",
+				"name": "Perfect Guard",
+				"effect": "parry",
+				"value": 1.0,
+				"pos": [
+					-1,
+					2
+				],
+				"needs": [
+					"steady_arm"
+				],
+				"text": "Raise the shield just as a blow lands to stagger the attacker."
+			},
+			{
+				"id": "bulwark",
+				"name": "Bulwark",
+				"effect": "block",
+				"value": 0.1,
+				"pos": [
+					1,
+					2
+				],
+				"needs": [
+					"steady_arm"
+				],
+				"text": "Your shield stops 10% more."
+			},
+			{
+				"id": "iron_will",
+				"name": "Iron Will",
+				"effect": "stamina_regen",
+				"value": 0.25,
+				"pos": [
+					-1,
+					3
+				],
+				"needs": [
+					"perfect_guard"
+				],
+				"text": "Stamina returns 25% faster."
+			},
+			{
+				"id": "thorns",
+				"name": "Thorns",
+				"effect": "thorns",
+				"value": 0.2,
+				"pos": [
+					1,
+					3
+				],
+				"needs": [
+					"bulwark"
+				],
+				"text": "Blocked blows hurt the attacker for 20%."
+			}
+		],
+		"agility": [
+			{
+				"id": "charge",
+				"name": "Charge",
+				"effect": "art",
+				"value": 1.0,
+				"key": "V",
+				"text": "An Art. Burst forward, bowling over anything in your way.",
+				"pos": [
+					0,
+					0
+				]
+			},
+			{
+				"id": "light_step",
+				"name": "Light Step",
+				"effect": "roll_cost",
+				"value": -0.3,
+				"pos": [
+					0,
+					1
+				],
+				"text": "Rolling costs 30% less stamina.",
+				"needs": [
+					"charge"
+				]
+			},
+			{
+				"id": "second_breath",
+				"name": "Second Breath",
+				"effect": "sprint_cost",
+				"value": -0.3,
+				"pos": [
+					-1,
+					2
+				],
+				"needs": [
+					"light_step"
+				],
+				"text": "Sprinting costs 30% less."
+			},
+			{
+				"id": "ghost",
+				"name": "Ghost",
+				"effect": "iframes",
+				"value": 0.35,
+				"pos": [
+					1,
+					2
+				],
+				"needs": [
+					"light_step"
+				],
+				"text": "You are untouchable for longer in a roll."
+			},
+			{
+				"id": "quick_recovery",
+				"name": "Quick Recovery",
+				"effect": "stamina_delay",
+				"value": -0.4,
+				"pos": [
+					-1,
+					3
+				],
+				"needs": [
+					"second_breath"
+				],
+				"text": "Stamina starts returning sooner."
+			},
+			{
+				"id": "fleet",
+				"name": "Fleet",
+				"effect": "speed",
+				"value": 0.08,
+				"pos": [
+					1,
+					3
+				],
+				"needs": [
+					"ghost"
+				],
+				"text": "You move 8% faster."
+			}
+		],
+		"vitality": [
+			{
+				"id": "battle_cry",
+				"name": "Battle Cry",
+				"effect": "art",
+				"value": 1.0,
+				"key": "B",
+				"text": "An Art. A shout that steadies you: health returns and your blows hit harder for a while.",
+				"pos": [
+					0,
+					0
+				]
+			},
+			{
+				"id": "hardy",
+				"name": "Hardy",
+				"effect": "max_health",
+				"value": 25,
+				"pos": [
+					0,
+					1
+				],
+				"text": "25 more health.",
+				"needs": [
+					"battle_cry"
+				]
+			},
+			{
+				"id": "field_medic",
+				"name": "Field Medic",
+				"effect": "potion",
+				"value": 0.35,
+				"pos": [
+					-1,
+					2
+				],
+				"needs": [
+					"hardy"
+				],
+				"text": "Draughts and food heal 35% more."
+			},
+			{
+				"id": "thick_skin",
+				"name": "Thick Skin",
+				"effect": "armour",
+				"value": 0.12,
+				"pos": [
+					1,
+					2
+				],
+				"needs": [
+					"hardy"
+				],
+				"text": "Take 12% less from every blow."
+			},
+			{
+				"id": "regrowth",
+				"name": "Regrowth",
+				"effect": "regen",
+				"value": 1.5,
+				"pos": [
+					-1,
+					3
+				],
+				"needs": [
+					"field_medic"
+				],
+				"text": "Out of a fight, health slowly returns."
+			},
+			{
+				"id": "last_stand",
+				"name": "Last Stand",
+				"effect": "last_stand",
+				"value": 1.0,
+				"pos": [
+					1,
+					3
+				],
+				"needs": [
+					"thick_skin"
+				],
+				"text": "Once between rests, a killing blow leaves you at 1."
+			}
+		],
+		"law": [
+			{
+				"id": "attunement",
+				"name": "Attunement",
+				"effect": "cooldown",
+				"value": -0.2,
+				"pos": [
+					0,
+					0
+				],
+				"text": "Your Inscription recovers 20% sooner."
+			},
+			{
+				"id": "deep_well",
+				"name": "Deep Well",
+				"effect": "price",
+				"value": -0.4,
+				"pos": [
+					-1,
+					1
+				],
+				"needs": [
+					"attunement"
+				],
+				"text": "The price is 40% lighter."
+			},
+			{
+				"id": "resonance",
+				"name": "Resonance",
+				"effect": "law_power",
+				"value": 0.25,
+				"pos": [
+					1,
+					1
+				],
+				"needs": [
+					"attunement"
+				],
+				"text": "Your Inscription is 25% stronger."
+			},
+			{
+				"id": "clarity",
+				"name": "Clarity",
+				"effect": "discovery",
+				"value": 0.5,
+				"pos": [
+					0,
+					2
+				],
+				"needs": [
+					"deep_well",
+					"resonance"
+				],
+				"text": "Hidden uses reveal themselves sooner."
+			}
+		]
+	}
+}

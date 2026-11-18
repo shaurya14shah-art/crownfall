@@ -1,0 +1,256 @@
+{
+	"_comment": "Every item in the game. kind: weapon | shield | consumable | material | relic. model: a file in assets/gear (held in the hand). rarity: common | fine | rare | relic. price is what Tobin charges; he pays a third.",
+	"iron_sword": {
+		"name": "Iron Sword",
+		"kind": "weapon",
+		"model": "sword_1handed",
+		"damage": 26,
+		"speed": 1.45,
+		"price": 40,
+		"rarity": "common",
+		"text": "Brightwater iron. Holds an edge if you don't ask much of it."
+	},
+	"knights_greatsword": {
+		"name": "Knight's Greatsword",
+		"kind": "weapon",
+		"model": "sword_2handed",
+		"damage": 38,
+		"speed": 1.05,
+		"two_handed": true,
+		"price": 210,
+		"rarity": "fine",
+		"text": "Heavy and honest. Each swing commits you to it."
+	},
+	"hand_axe": {
+		"name": "Hand Axe",
+		"kind": "weapon",
+		"model": "axe_1handed",
+		"damage": 27,
+		"speed": 1.2,
+		"price": 75,
+		"rarity": "common",
+		"text": "A woodsman's axe that found other work."
+	},
+	"bearded_axe": {
+		"name": "Bearded War Axe",
+		"kind": "weapon",
+		"model": "axe_2handed",
+		"damage": 44,
+		"speed": 0.95,
+		"two_handed": true,
+		"price": 260,
+		"rarity": "fine",
+		"text": "The hook of the blade pulls shields aside."
+	},
+	"barrow_dagger": {
+		"name": "Barrow Dagger",
+		"kind": "weapon",
+		"model": "dagger",
+		"damage": 17,
+		"speed": 1.7,
+		"price": 55,
+		"rarity": "fine",
+		"text": "Found among the grave goods. Light, quick, and cold to hold."
+	},
+	"round_shield": {
+		"name": "Round Shield",
+		"kind": "shield",
+		"model": "shield_round",
+		"block": 0.75,
+		"price": 35,
+		"rarity": "common",
+		"text": "Planks and an iron boss. It will take a few blows."
+	},
+	"crest_shield": {
+		"name": "Crested Shield",
+		"kind": "shield",
+		"model": "shield_badge_color",
+		"block": 0.82,
+		"price": 120,
+		"rarity": "fine",
+		"text": "Painted with a crest nobody in Brightwater recognises."
+	},
+	"spiked_shield": {
+		"name": "Spiked Shield",
+		"kind": "shield",
+		"model": "shield_spikes_color",
+		"block": 0.72,
+		"thorns": 0.25,
+		"price": 160,
+		"rarity": "fine",
+		"text": "Blocking with it hurts the one who swung."
+	},
+	"tower_shield": {
+		"name": "Tower Shield",
+		"kind": "shield",
+		"model": "shield_square_color",
+		"block": 0.9,
+		"slow": 0.08,
+		"price": 240,
+		"rarity": "rare",
+		"text": "A wall you carry. You will not be quick behind it."
+	},
+	"red_potion": {
+		"name": "Healing Draught",
+		"kind": "consumable",
+		"heal": 65,
+		"price": 20,
+		"rarity": "common",
+		"stack": 9,
+		"text": "Red, bitter, and very welcome."
+	},
+	"bread": {
+		"name": "Brightwater Loaf",
+		"kind": "consumable",
+		"heal": 15,
+		"price": 6,
+		"rarity": "common",
+		"stack": 9,
+		"text": "Still warm, somehow."
+	},
+	"bone_shard": {
+		"name": "Bone Shard",
+		"kind": "material",
+		"price": 6,
+		"rarity": "common",
+		"stack": 99,
+		"text": "What is left of the risen. Tobin will take them."
+	},
+	"grave_dust": {
+		"name": "Grave Dust",
+		"kind": "material",
+		"price": 14,
+		"rarity": "fine",
+		"stack": 99,
+		"text": "Grey, fine, and faintly warm."
+	},
+	"iron_scrap": {
+		"name": "Iron Scrap",
+		"kind": "material",
+		"price": 9,
+		"rarity": "common",
+		"stack": 99,
+		"text": "Bent rivets and broken blades."
+	},
+	"stilled_tide_shard": {
+		"name": "Stilled Tide Shard",
+		"kind": "relic",
+		"price": 0,
+		"rarity": "relic",
+		"catalyst": 3,
+		"text": "A splinter of water that has forgotten how to move. Something in you wants to hold it."
+	},
+	"tide_glass": {
+		"name": "Tide-Glass Lens",
+		"kind": "relic",
+		"price": 0,
+		"rarity": "relic",
+		"law_power": 0.1,
+		"text": "Taken from the Tidewarden. Through it, water looks like it is listening. Your Inscription is a little stronger while you carry it."
+	},
+	"hour_shard": {
+		"name": "Hour Shard",
+		"kind": "relic",
+		"price": 0,
+		"rarity": "relic",
+		"catalyst": 4,
+		"text": "A sliver of a stopped hour. It is warm on one side and cold on the other, and the sides change."
+	},
+	"crown_fragment": {
+		"name": "Fragment of the Crown",
+		"kind": "relic",
+		"price": 0,
+		"rarity": "relic",
+		"catalyst": 5,
+		"text": "A piece of the circlet that was all the Laws at once. It fits your hand exactly."
+	},
+	"bell_clapper": {
+		"name": "Highmoor Bell Clapper",
+		"kind": "relic",
+		"price": 0,
+		"rarity": "relic",
+		"text": "Bronze, cracked, and still humming faintly long after you rang it."
+	},
+	"orrery_disc": {
+		"name": "Orrery Disc",
+		"kind": "relic",
+		"price": 0,
+		"rarity": "relic",
+		"text": "A brass disc of turning rings. The rings move when nobody is watching."
+	},
+	"quarterstaff": {
+		"name": "Ash Quarterstaff",
+		"kind": "weapon",
+		"model": "staff",
+		"damage": 29,
+		"speed": 1.3,
+		"two_handed": true,
+		"posture": 1.8,
+		"price": 90,
+		"rarity": "common",
+		"text": "A long ash pole shod in iron. It does not cut, but it knocks the dead off their feet."
+	},
+	"night_greatsword": {
+		"name": "Grave Knight's Greatsword",
+		"kind": "weapon",
+		"model": "sword_2handed_color",
+		"damage": 48,
+		"speed": 1.05,
+		"two_handed": true,
+		"posture": 1.5,
+		"etch": "grave",
+		"price": 400,
+		"rarity": "rare",
+		"text": "Carried along the old roads at night. It drinks a little of every wound it opens."
+	},
+	"tidecaller_buckler": {
+		"name": "Tidecaller's Buckler",
+		"kind": "shield",
+		"model": "shield_round_color",
+		"block": 0.86,
+		"thorns": 0.15,
+		"price": 300,
+		"rarity": "rare",
+		"text": "The Drowned Captain's shield, crusted with salt. Blows that land on it come back cold."
+	},
+	"ember_coal": {
+		"name": "Ember Coal",
+		"kind": "material",
+		"price": 30,
+		"rarity": "fine",
+		"stack": 99,
+		"text": "A coal that never quite goes out. Etched into a blade, it sets what it cuts burning."
+	},
+	"rime_salt": {
+		"name": "Rime Salt",
+		"kind": "material",
+		"price": 30,
+		"rarity": "fine",
+		"stack": 99,
+		"text": "Salt from the drowned shore, cold to the touch in summer. Etched into a blade, it chills."
+	},
+	"star_iron": {
+		"name": "Star-Iron",
+		"kind": "material",
+		"price": 120,
+		"rarity": "rare",
+		"stack": 99,
+		"text": "Iron that fell from the sky, carried by the great dead. The forge needs it for the finest work."
+	},
+	"hearth_seed": {
+		"name": "Hearthseed",
+		"kind": "upgrade",
+		"price": 0,
+		"rarity": "rare",
+		"stack": 9,
+		"text": "A seed that is warm in the hand. At a Waystone, it gives your Flask one more draught."
+	},
+	"bright_tear": {
+		"name": "Bright Tear",
+		"kind": "upgrade",
+		"price": 0,
+		"rarity": "rare",
+		"stack": 9,
+		"text": "A drop of light. At a Waystone, it makes every draught from your Flask heal more."
+	}
+}

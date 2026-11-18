@@ -1,0 +1,214 @@
+{
+  "categories": {
+    "physical":      "Matter, durability, strength, density and structure.",
+    "kinetic":       "Movement, momentum, force and acceleration.",
+    "spatial":       "Distance, position, boundaries and dimensions.",
+    "temporal":      "Duration, sequence, perception of time and limited temporal interaction.",
+    "vital":         "Life, biological processes, regeneration and adaptation.",
+    "cognitive":     "Perception, memory, attention and information.",
+    "conceptual":    "Oaths, ownership, identity, authority and other abstract principles.",
+    "environmental": "Weather, currents, pressure, temperature and natural systems."
+  },
+
+  "principles": {
+    "momentum": {
+      "name": "Momentum", "category": "kinetic", "power": 1.10,
+      "affinity": {"hardness": 0.4, "density": 0.8, "liquid": 0.6, "living": 0.3},
+      "verbs": ["borrow", "carry", "spend"],
+      "applications": [
+        {"id": "borrowed_step", "name": "Borrowed Step", "manifest": true,
+         "effect": "attack", "base": 14, "contexts": ["encounter"],
+         "text": "Takes the speed of something you touch and puts it into your own strike."},
+        {"id": "redirect", "name": "Redirect",
+         "effect": "defence", "base": 12, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "A blow that lands on you can be handed onward instead of absorbed."},
+        {"id": "falling_easy", "name": "Falling Easy",
+         "effect": "traverse", "base": 10, "contexts": ["hall"],
+         "discover": {"context": "hall"},
+         "text": "A fall is only momentum. Borrowed away, it is a step."},
+        {"id": "push_the_tide", "name": "Push the Tide",
+         "effect": "traverse", "base": 12, "contexts": ["hall", "experiment"],
+         "discover": {"context": "experiment", "property": "liquid"},
+         "text": "Water has more momentum than anything you will ever carry. Some of it can be lent."}
+      ]
+    },
+    "structure": {
+      "name": "Structure", "category": "physical", "power": 1.00,
+      "affinity": {"hardness": 1.0, "density": 0.6, "liquid": 0.1, "living": 0.4},
+      "verbs": ["loosen", "bind", "read"],
+      "applications": [
+        {"id": "unmake_the_joint", "name": "Unmake the Joint", "manifest": true,
+         "effect": "attack", "base": 13, "contexts": ["encounter"],
+         "text": "Finds where a thing holds itself together and asks it to stop."},
+        {"id": "brace", "name": "Brace",
+         "effect": "defence", "base": 14, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "Your own frame refuses to bend for as long as you can hold the thought."},
+        {"id": "mend", "name": "Mend",
+         "effect": "shape", "base": 10, "contexts": ["experiment"],
+         "discover": {"context": "experiment", "property": "fibrous"},
+         "text": "What was loosened can be bound again, if you remember how it was."},
+        {"id": "read_the_grain", "name": "Read the Grain",
+         "effect": "perceive", "base": 10, "contexts": ["experiment", "hall", "orrery"],
+         "discover": {"context": "experiment", "property": "crystalline"},
+         "text": "Stone keeps the shape of every force that ever made it. You can feel the record."}
+      ]
+    },
+    "boundary": {
+      "name": "Boundary", "category": "spatial", "power": 0.95,
+      "affinity": {"hardness": 0.5, "density": 0.3, "liquid": 0.5, "living": 0.5},
+      "verbs": ["draw", "close", "fold"],
+      "applications": [
+        {"id": "drawn_line", "name": "The Drawn Line", "manifest": true,
+         "effect": "defence", "base": 16, "contexts": ["encounter"],
+         "text": "A line you have drawn cannot be crossed by the thing you drew it against."},
+        {"id": "closed_door", "name": "Closed Door",
+         "effect": "evade", "base": 14, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "evade"},
+         "text": "Behind you there is a door. It was not there before you needed it."},
+        {"id": "fold_the_hall", "name": "Fold the Hall",
+         "effect": "traverse", "base": 12, "contexts": ["hall"],
+         "discover": {"context": "hall"},
+         "text": "Distance is a boundary between here and there. Boundaries can be moved."},
+        {"id": "edge_of_sight", "name": "Edge of Sight",
+         "effect": "perceive", "base": 9, "contexts": ["orrery", "hall", "experiment"],
+         "discover": {"context": "any", "mastery": 15},
+         "text": "You can feel where any space ends, including the ones nobody has found."}
+      ]
+    },
+    "sequence": {
+      "name": "Sequence", "category": "temporal", "power": 1.05,
+      "affinity": {"hardness": 0.3, "density": 0.3, "liquid": 0.7, "living": 0.6},
+      "verbs": ["precede", "repeat", "slow"],
+      "applications": [
+        {"id": "half_beat", "name": "Half a Beat", "manifest": true,
+         "effect": "evade", "base": 15, "contexts": ["encounter"],
+         "text": "You move a half-beat before the moment that would have caught you."},
+        {"id": "afterimage", "name": "Afterimage",
+         "effect": "defence", "base": 12, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "The blow lands where you were, a moment ago, and nowhere else."},
+        {"id": "replay", "name": "Replay",
+         "effect": "perceive", "base": 11, "contexts": ["experiment", "orrery"],
+         "discover": {"context": "experiment", "property": "worked"},
+         "text": "A made thing remembers being made. You can watch it happen again."},
+        {"id": "slow_water", "name": "Slow Water",
+         "effect": "traverse", "base": 11, "contexts": ["hall"],
+         "discover": {"context": "hall"},
+         "text": "A rising tide is only a sequence. You can stand between two of its moments."}
+      ]
+    },
+    "renewal": {
+      "name": "Renewal", "category": "vital", "power": 0.90,
+      "affinity": {"hardness": 0.1, "density": 0.2, "liquid": 0.5, "living": 1.0},
+      "verbs": ["knit", "wake", "quiet"],
+      "applications": [
+        {"id": "knit", "name": "Knit", "manifest": true,
+         "effect": "restore", "base": 16, "contexts": ["encounter", "anywhere"],
+         "text": "Torn flesh remembers being whole and is persuaded to be so again."},
+        {"id": "second_wind", "name": "Second Wind",
+         "effect": "defence", "base": 10, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "Exhaustion is a state of the body, and the body listens."},
+        {"id": "quieting", "name": "Quieting",
+         "effect": "calm", "base": 15, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "calm"},
+         "text": "A racing heart can be slowed. Not only yours."},
+        {"id": "bloom", "name": "Bloom",
+         "effect": "shape", "base": 9, "contexts": ["experiment"],
+         "discover": {"context": "experiment", "property": "living"},
+         "text": "Dead wood remembers the tree it was, for a while."}
+      ]
+    },
+    "reflection": {
+      "name": "Reflection", "category": "cognitive", "power": 1.00,
+      "affinity": {"hardness": 0.6, "density": 0.2, "liquid": 0.9, "living": 0.3},
+      "verbs": ["show", "keep", "return"],
+      "applications": [
+        {"id": "mirror_sight", "name": "Mirror Sight", "manifest": true,
+         "effect": "perceive", "base": 12, "contexts": ["encounter", "hall", "orrery", "experiment"],
+         "text": "Anything that reflects can be looked through, as if it were a window."},
+        {"id": "false_image", "name": "False Image",
+         "effect": "evade", "base": 14, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "evade"},
+         "text": "What is seen of you need not be where you are."},
+        {"id": "what_the_glass_kept", "name": "What the Glass Kept",
+         "effect": "perceive", "base": 13, "contexts": ["experiment", "orrery"],
+         "discover": {"context": "experiment", "property": "reflective"},
+         "text": "A reflection is not lost when the light moves on. It is kept, faintly, in the surface."},
+        {"id": "blinding_return", "name": "Blinding Return",
+         "effect": "attack", "base": 12, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "Whatever looks at you is shown itself, all at once."}
+      ]
+    },
+    "oath": {
+      "name": "Oath", "category": "conceptual", "power": 1.15,
+      "affinity": {"hardness": 0.2, "density": 0.2, "liquid": 0.2, "living": 0.8},
+      "verbs": ["bind", "name", "claim"],
+      "applications": [
+        {"id": "spoken_terms", "name": "Spoken Terms", "manifest": true,
+         "effect": "calm", "base": 16, "contexts": ["encounter"],
+         "text": "Terms spoken aloud and accepted bind both parties. The world enforces them."},
+        {"id": "oathbreakers_due", "name": "Oathbreaker's Due",
+         "effect": "attack", "base": 15, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "What breaks faith with you is owed a cost, and the cost can be collected."},
+        {"id": "word_as_wall", "name": "Word as Wall",
+         "effect": "defence", "base": 12, "contexts": ["encounter"],
+         "discover": {"context": "any", "mastery": 18},
+         "text": "You promised yourself you would not fall here. It holds."},
+        {"id": "owned_thing", "name": "The Owned Thing",
+         "effect": "perceive", "base": 10, "contexts": ["experiment", "orrery"],
+         "discover": {"context": "experiment", "property": "worked"},
+         "text": "What is yours knows it is yours, and you know where it is."}
+      ]
+    },
+    "current": {
+      "name": "Current", "category": "environmental", "power": 1.00,
+      "affinity": {"hardness": 0.1, "density": 0.4, "liquid": 1.0, "living": 0.3},
+      "verbs": ["pull", "turn", "still"],
+      "applications": [
+        {"id": "pull_of_water", "name": "Pull of Water", "manifest": true,
+         "effect": "traverse", "base": 15, "contexts": ["hall", "encounter"],
+         "text": "Water moving near you moves the way you lean."},
+        {"id": "undertow", "name": "Undertow",
+         "effect": "attack", "base": 14, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "fight"},
+         "text": "Anything standing in water is standing in something you can pull."},
+        {"id": "still_the_surface", "name": "Still the Surface",
+         "effect": "calm", "base": 12, "contexts": ["encounter"],
+         "discover": {"context": "encounter", "approach": "calm"},
+         "text": "A creature of the water is quieter when its water is."},
+        {"id": "read_the_flow", "name": "Read the Flow",
+         "effect": "perceive", "base": 11, "contexts": ["experiment", "orrery", "hall"],
+         "discover": {"context": "experiment", "property": "liquid"},
+         "text": "Every current comes from somewhere. You can follow one back."}
+      ]
+    }
+  },
+
+  "interactions": {
+    "counters": [
+      ["boundary", "momentum"],
+      ["momentum", "structure"],
+      ["structure", "current"],
+      ["current", "reflection"],
+      ["reflection", "oath"],
+      ["oath", "boundary"],
+      ["sequence", "renewal"],
+      ["renewal", "sequence"]
+    ],
+    "amplifies": [
+      ["current", "momentum"],
+      ["structure", "boundary"],
+      ["reflection", "sequence"],
+      ["renewal", "current"],
+      ["oath", "structure"]
+    ],
+    "counter_multiplier": 1.5,
+    "countered_multiplier": 0.6,
+    "amplify_multiplier": 1.25
+  }
+}

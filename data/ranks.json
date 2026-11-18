@@ -1,0 +1,39 @@
+{
+  "_comment": "Rank changes what an Inscription can DO, not how large its numbers are. Effect magnitude rises only gently with rank (rank_scale); each rank's real gain is its unlock, which the resolver checks by id.",
+  "stages": ["Initial", "Established", "Transcendent"],
+  "stage_mastery": [0, 30, 65],
+  "rank_scale": 0.08,
+  "ranks": [
+    {"rank": 1, "title": "Dormant", "state": "Unawakened.", "unlock": "", "unlock_text": "",
+     "requires": {}},
+    {"rank": 2, "title": "Awakened", "state": "First manifestation of an Inscription.",
+     "unlock": "manifest", "unlock_text": "Your Inscription can be used at all.",
+     "requires": {}},
+    {"rank": 3, "title": "Ascendant", "state": "The Inscription becomes consistently usable.",
+     "unlock": "two_applications",
+     "unlock_text": "Two applications can be brought to bear in one encounter instead of one.",
+     "requires": {"mastery": 30, "applications": 2, "catalyst_tier": 2}},
+    {"rank": 4, "title": "Exalted", "state": "Advanced applications develop.",
+     "unlock": "condition_relief",
+     "unlock_text": "Your condition can be satisfied by an ally who meets it on your behalf.",
+     "requires": {"mastery": 55, "applications": 3, "catalyst_tier": 3}},
+    {"rank": 5, "title": "Sovereign", "state": "The individual begins influencing their surroundings through their Law.",
+     "unlock": "field",
+     "unlock_text": "Your principle colours the space around you without being invoked.",
+     "requires": {"mastery": 75, "applications": 4, "catalyst_tier": 4}},
+    {"rank": 6, "title": "Transcendent", "state": "Operates beyond ordinary physical limits.",
+     "unlock": "price_choice",
+     "unlock_text": "You may choose which price you pay, once a day.",
+     "requires": {"mastery": 90, "applications": 4, "catalyst_tier": 5}},
+    {"rank": 7, "title": "Eternal", "state": "A being approaching the fundamental Laws themselves.",
+     "unlock": "law",
+     "unlock_text": "Not recorded. Nobody who reached it has been asked.",
+     "requires": {"mastery": 100, "applications": 4, "catalyst_tier": 6, "unattainable": true}}
+  ],
+  "failure_consequences": [
+    {"id": "suppressed", "text": "Your Inscription goes silent. It will not answer for {days} days.", "suppress_days": 3},
+    {"id": "instability", "text": "Your Inscription answers wrongly for a while: every use costs twice.", "instability_uses": 6},
+    {"id": "sealed_application", "text": "{application} closes to you. You will have to find it again.", "seal": true},
+    {"id": "scarred", "text": "The trial leaves a mark that does not fade. People who know what it means will look twice.", "mark": 3}
+  ]
+}

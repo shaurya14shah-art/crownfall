@@ -1,0 +1,30 @@
+{
+	"_comment": "The Forge. A new weapon is a form (its shape and moveset), a metal (how hard it hits and how fast), and an optional etching (what each hit does besides). Costs are bag items plus silver. Tempering raises any weapon +1..+5, 10% damage a step. Salvage gives back about half of what went in.",
+	"forms": {
+		"longsword": {"name": "Longsword", "model": "sword_1handed", "icon": "iron_sword", "damage": 25, "speed": 1.45, "posture": 1.0, "cost": {"iron_scrap": 3, "silver": 40}},
+		"axe": {"name": "Axe", "model": "axe_1handed", "icon": "hand_axe", "damage": 28, "speed": 1.25, "posture": 1.2, "cost": {"iron_scrap": 3, "silver": 50}},
+		"dagger": {"name": "Dagger", "model": "dagger", "icon": "barrow_dagger", "damage": 17, "speed": 1.8, "posture": 0.7, "cost": {"iron_scrap": 2, "silver": 30}},
+		"greatsword": {"name": "Greatsword", "model": "sword_2handed", "icon": "knights_greatsword", "damage": 39, "speed": 1.05, "two_handed": true, "posture": 1.45, "cost": {"iron_scrap": 6, "silver": 120}},
+		"great_axe": {"name": "Great Axe", "model": "axe_2handed", "icon": "bearded_axe", "damage": 45, "speed": 0.95, "two_handed": true, "posture": 1.6, "cost": {"iron_scrap": 7, "silver": 140}},
+		"war_staff": {"name": "War Staff", "model": "staff", "icon": "quarterstaff", "damage": 30, "speed": 1.3, "two_handed": true, "posture": 1.9, "cost": {"iron_scrap": 2, "bone_shard": 4, "silver": 60}}
+	},
+	"metals": {
+		"iron": {"name": "Iron", "mult": 1.0, "speed": 1.0, "rarity": "common", "cost": {}},
+		"bone": {"name": "Bone-wrought", "mult": 0.95, "speed": 1.12, "rarity": "fine", "cost": {"bone_shard": 6}, "tint": "e8dcc0"},
+		"grave": {"name": "Grave-iron", "mult": 1.12, "speed": 0.97, "rarity": "fine", "cost": {"grave_dust": 3}, "tint": "7fa28a"},
+		"star": {"name": "Star-iron", "mult": 1.28, "speed": 1.0, "rarity": "rare", "cost": {"star_iron": 2, "silver": 80}, "tint": "9fc4ff"}
+	},
+	"etchings": {
+		"none": {"name": "Plain", "suffix": "", "cost": {}, "text": "No etching."},
+		"ember": {"name": "Ember", "suffix": "of Embers", "cost": {"ember_coal": 2, "silver": 30}, "colour": "ff7a2e", "text": "Hits set foes burning: 4 a second for 3 seconds."},
+		"rime": {"name": "Rime", "suffix": "of Rime", "cost": {"rime_salt": 2, "silver": 30}, "colour": "7fd3ff", "text": "Hits chill: foes slow for a moment and take 15% more while chilled."},
+		"grave": {"name": "Grave", "suffix": "of the Grave", "cost": {"grave_dust": 3, "silver": 30}, "colour": "8be08f", "text": "Hits drink life: 7% of the damage heals you."}
+	},
+	"temper": [
+		{"iron_scrap": 2, "silver": 30},
+		{"iron_scrap": 3, "silver": 60},
+		{"iron_scrap": 5, "silver": 100},
+		{"star_iron": 1, "silver": 160},
+		{"star_iron": 2, "silver": 240}
+	]
+}
